@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+
+    <div class="balance-section">
+      <h2>Available Balance: ₹<span id="balance">0</span></h2>
+    </div>
+
+    <div class="income-expense">
+      <div>
+        <h3>Total Income</h3>
+        <p id="income">₹0</p>
+      </div>
+      <div>
+        <h3>Total Expenses</h3>
+        <p id="expense">₹0</p>
+      </div>
+    </div>
+
+    <div class="form-container">
+      <h3>Add Income</h3>
+      <form id="income-form">
+        <input type="text" id="income-text" placeholder="Source (e.g., Salary)" required />
+        <input type="number" id="income-amount" placeholder="Amount (₹)" required />
+        <button type="submit">Add Income</button>
+      </form>
+
+      <h3>Add Expense</h3>
+      <form id="expense-form">
+        <input type="text" id="expense-text" placeholder="Reason (e.g., Rent)" required />
+        <input type="number" id="expense-amount" placeholder="Amount (₹)" required />
+        <button type="submit">Add Expense</button>
+      </form>
+    </div>
+
+    <div class="lists">
+      <div class="list-section">
+        <h3>💰 Income List</h3>
+        <ul id="income-list" class="list"></ul>
+      </div>
+      <div class="list-section">
+        <h3>💸 Expense List</h3>
+        <ul id="expense-list" class="list"></ul>
+      </div>
+    </div>
+
+    <!-- Slide to Clear Section -->
+    <div class="slider-container">
+      <div class="slider-button" id="slider-button">
+        <div class="slider-handle" id="slider-handle">≫</div>
+        <span class="slider-label" id="slider-label">Slide to Clear All Data</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
